@@ -602,14 +602,19 @@ pub type ViPInt64 = *mut ViInt64;
 pub type ViAInt64 = *mut ViInt64;
 #[cfg(target_os="windows")]
 pub type ViUInt32 = u32;
+
 #[cfg(not(target_os="windows"))]
-pub type ViUInt32 = ::std::os::raw::c_ulong;
+pub type ViUInt32 = u32;
+
 pub type ViPUInt32 = *mut ViUInt32;
 pub type ViAUInt32 = *mut ViUInt32;
+
 #[cfg(target_os="windows")]
 pub type ViInt32 = i32;
+
 #[cfg(not(target_os="windows"))]
-pub type ViInt32 = ::std::os::raw::c_long;
+pub type ViInt32 = i32;
+
 pub type ViPInt32 = *mut ViInt32;
 pub type ViAInt32 = *mut ViInt32;
 pub type ViUInt16 = ::std::os::raw::c_ushort;
